@@ -1,0 +1,196 @@
+.experience {
+  padding: 5rem 0;
+  background: var(--surface);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--text-primary);
+  position: relative;
+}
+
+.title::after {
+  content: '';
+  position: absolute;
+  bottom: -0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4rem;
+  height: 3px;
+  background: var(--primary-color);
+  border-radius: 2px;
+}
+
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 4rem auto 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--border);
+  transform: translateX(-50%);
+}
+
+.timelineItem {
+  position: relative;
+  margin-bottom: 3rem;
+  width: 50%;
+}
+
+.timelineItem:nth-child(odd) {
+  left: 0;
+  padding-right: 2rem;
+}
+
+.timelineItem:nth-child(even) {
+  left: 50%;
+  padding-left: 2rem;
+}
+
+.timelineItem::before {
+  content: '';
+  position: absolute;
+  top: 1.5rem;
+  width: 1rem;
+  height: 1rem;
+  background: var(--primary-color);
+  border-radius: 50%;
+  border: 3px solid var(--background);
+  box-shadow: 0 0 0 3px var(--border);
+}
+
+.timelineItem:nth-child(odd)::before {
+  right: -0.5rem;
+}
+
+.timelineItem:nth-child(even)::before {
+  left: -0.5rem;
+}
+
+.experienceCard {
+  background: var(--background);
+  padding: 2rem;
+  border-radius: 1rem;
+  border: 1px solid var(--border);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.experienceCard:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary-color);
+}
+
+.experienceCard::before {
+  content: '';
+  position: absolute;
+  top: 1.5rem;
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+}
+
+.timelineItem:nth-child(odd) .experienceCard::before {
+  right: -20px;
+  border-left-color: var(--border);
+}
+
+.timelineItem:nth-child(even) .experienceCard::before {
+  left: -20px;
+  border-right-color: var(--border);
+}
+
+.period {
+  font-size: 0.9rem;
+  color: var(--primary-color);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.position {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.company {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+
+.description {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.achievements {
+  margin-top: 1rem;
+}
+
+.achievements h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.achievements ul {
+  padding-left: 1rem;
+}
+
+.achievements li {
+  list-style: disc;
+  color: var(--text-secondary);
+  margin-bottom: 0.25rem;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .experience {
+    padding: 3rem 0;
+  }
+  
+  .title {
+    font-size: 2rem;
+  }
+  
+  .timeline::before {
+    left: 1rem;
+  }
+  
+  .timelineItem {
+    width: 100%;
+    left: 0 !important;
+    padding-left: 3rem !important;
+    padding-right: 0 !important;
+  }
+  
+  .timelineItem::before {
+    left: 0.5rem !important;
+    right: auto !important;
+  }
+  
+  .experienceCard::before {
+    display: none;
+  }
+}
